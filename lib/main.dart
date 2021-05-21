@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+import 'core/app_const.dart';
+import 'core/theme_alternative.dart';
+import 'helpers/service_call.dart';
+import 'pages/home_page.dart';
+
+void main() {
+  setupLocator();
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: kTitleHome,
+      theme: kThemeAlternative,
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
